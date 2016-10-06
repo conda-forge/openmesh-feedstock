@@ -1,4 +1,4 @@
-{% set version = "6.2" %}
+{% set version = "6.3" %}
 
 package:
   name: openmesh
@@ -6,20 +6,23 @@ package:
 
 source:
   fn: OpenMesh-{{ version }}.tar.gz
-  url: http://www.openmesh.org/media/Releases/{{ version }}/OpenMesh-{{ version }}.tar.gz
-  sha256: 570b5b2d3b949050d9628367268c495e87b3dc59f18a07c8037449356fe40374
+  url: https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/repository/archive.tar.gz?ref=OpenMesh-{{ version }}
+  sha256: 60a0f6bc3a6c7f6a4bb2089538c8e65f11767cacdd0d961116b1fd577cc26462
   patches:
-    - sitedir.patch  # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/merge_requests/79
-    - bindings-compilation.patch  # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/merge_requests/81
+    #- sitedir.patch  # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/merge_requests/79
+
+    # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/merge_requests/81
+    # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/commit/c8ebba7492358059aad10d0eb3ec64feec470055
+    - updated-output-directories.patch 
 
 build:
   number: 0
   features:
-  - vc9  # [win and py27]
-  - vc10  # [win and py34]
-  - vc14  # [win and py35]
+    - vc9  # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and py35]
 
-# https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/issues/29
+  # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/issues/29
   skip: true  # [win and py35]
 
 requirements:

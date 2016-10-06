@@ -11,6 +11,7 @@ cmake \
   ..
 
 make install -j${CPU_COUNT}
+mv ${PREFIX}/lib/python/* ${SP_DIR}
 
 # osx, py34: ***Exception: SegFault in test_load_obj_with_material (test_read_write_obj.ReadWriteOBJ)
 ctest --output-on-failure || echo "failed"
