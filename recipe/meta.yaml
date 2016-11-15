@@ -16,7 +16,7 @@ source:
     - updated-output-directories.patch 
 
 build:
-  number: 0
+  number: 1
   features:
     - vc9  # [win and py27]
     - vc10  # [win and py34]
@@ -30,10 +30,10 @@ requirements:
     - toolchain
     - python
     - cmake
-    - boost 1.61.*
+    - boost 1.62.*
   run:
     - python
-    - boost 1.61.*
+    - boost 1.62.*
 
 test:
   imports:
