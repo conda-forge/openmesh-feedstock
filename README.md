@@ -33,7 +33,6 @@ conda search openmesh --channel conda-forge
 ```
 
 
-
 About conda-forge
 =================
 
