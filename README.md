@@ -11,6 +11,18 @@ Summary: OpenMesh is a generic and efficient data structure for representing and
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/openmesh-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/openmesh-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/openmesh-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/openmesh-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/openmesh-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/openmesh-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/openmesh/badges/version.svg)](https://anaconda.org/conda-forge/openmesh)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/openmesh/badges/downloads.svg)](https://anaconda.org/conda-forge/openmesh)
+
 Installing openmesh
 ===================
 
@@ -66,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/openmesh-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/openmesh-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/openmesh-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/openmesh-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/openmesh-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/openmesh-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/openmesh/badges/version.svg)](https://anaconda.org/conda-forge/openmesh)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/openmesh/badges/downloads.svg)](https://anaconda.org/conda-forge/openmesh)
 
 
 Updating openmesh-feedstock
