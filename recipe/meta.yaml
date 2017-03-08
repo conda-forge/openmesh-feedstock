@@ -9,8 +9,6 @@ source:
   url: https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/repository/archive.tar.gz?ref=OpenMesh-{{ version }}
   sha256: 60a0f6bc3a6c7f6a4bb2089538c8e65f11767cacdd0d961116b1fd577cc26462
   patches:
-    #- sitedir.patch  # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/merge_requests/79
-
     # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/merge_requests/81
     # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/commit/c8ebba7492358059aad10d0eb3ec64feec470055
     - updated-output-directories.patch 
@@ -20,10 +18,10 @@ build:
   features:
     - vc9  # [win and py27]
     - vc10  # [win and py34]
-    - vc14  # [win and py35]
+    - vc14  # [win and py>=35]
 
   # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/issues/29
-  skip: true  # [win and py35]
+  skip: true  # [win and py>=35]
 
 requirements:
   build:
@@ -41,7 +39,7 @@ test:
 
 about:
   home: http://www.openmesh.org/
-  license: BSD-3-Clause
+  license: BSD 3-Clause
   license_file: LICENSE
   summary: OpenMesh is a generic and efficient data structure for representing and manipulating polygonal meshes.
 
