@@ -14,14 +14,16 @@ Summary: OpenMesh is a generic and efficient data structure for representing and
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/openmesh-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/openmesh-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/openmesh-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/openmesh-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/openmesh-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/openmesh-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/openmesh-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/openmesh-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/openmesh-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/openmesh-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/openmesh-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/openmesh-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/openmesh/badges/version.svg)](https://anaconda.org/conda-forge/openmesh)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/openmesh/badges/downloads.svg)](https://anaconda.org/conda-forge/openmesh)
+[![Conda Recipe](https://img.shields.io/badge/recipe-openmesh-green.svg)](https://anaconda.org/conda-forge/openmesh)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/openmesh.svg)](https://anaconda.org/conda-forge/openmesh)
+[![Conda Version](https://img.shields.io/conda/vn/conda-forge/openmesh.svg)](https://anaconda.org/conda-forge/openmesh)
+[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/openmesh.svg)](https://anaconda.org/conda-forge/openmesh)
 
 Installing openmesh
 ===================
