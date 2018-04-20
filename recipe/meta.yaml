@@ -1,4 +1,4 @@
-{% set version = "6.3" %}
+{% set version = "7.0" %}
 
 package:
   name: openmesh
@@ -7,20 +7,20 @@ package:
 source:
   fn: OpenMesh-{{ version }}.tar.gz
   url: https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/repository/archive.tar.gz?ref=OpenMesh-{{ version }}
-  sha256: 60a0f6bc3a6c7f6a4bb2089538c8e65f11767cacdd0d961116b1fd577cc26462
-  patches:
+  sha256: 44a10bf27793c544ffa043b9c919e7396ed59e798e0891b9180086027da48e77
+  #patches:
     # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/merge_requests/81
     # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/commit/c8ebba7492358059aad10d0eb3ec64feec470055
-    - updated-output-directories.patch 
+    #- updated-output-directories.patch
 
 build:
-  number: 4
+  number: 0
   features:
     - vc9  # [win and py27]
     - vc14  # [win and py>=35]
 
   # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/issues/29
-  skip: true  # [win and py>=35]
+  #skip: true  # [win and py>=35]
 
 requirements:
   build:
