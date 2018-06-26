@@ -11,26 +11,25 @@ source:
   patches:
     # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/merge_requests/81
     # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/commit/c8ebba7492358059aad10d0eb3ec64feec470055
-    - updated-output-directories.patch 
+    - updated-output-directories.patch
 
 build:
   number: 4
-  features:
-    - vc9  # [win and py27]
-    - vc14  # [win and py>=35]
 
   # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/issues/29
   skip: true  # [win and py>=35]
 
 requirements:
   build:
-    - toolchain
-    - python
     - cmake
-    - boost 1.66.*
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - boost
   run:
     - python
-    - boost 1.66.*
+    - boost
 
 test:
   imports:
