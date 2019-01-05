@@ -6,8 +6,8 @@ jobs:
   strategy:
     maxParallel: 4
     matrix:
-      win_c_compilervs2008cxx_compilervs2008python2.7:
-        CONFIG: win_c_compilervs2008cxx_compilervs2008python2.7
+      win_c_compilervs2008cxx_compilervs2008:
+        CONFIG: win_c_compilervs2008cxx_compilervs2008
         CONDA_BLD_PATH: D:\\bld\\
   steps:
     # TODO: Fast finish on azure pipelines?
