@@ -1,5 +1,5 @@
 boost:
-- 1.67.0
+- 1.68.0
 c_compiler:
 - vs2008
 channel_sources:
