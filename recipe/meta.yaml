@@ -1,4 +1,4 @@
-{% set version = "6.3" %}
+{% set version = "7.1" %}
 
 package:
   name: openmesh
@@ -7,14 +7,10 @@ package:
 source:
   fn: OpenMesh-{{ version }}.tar.gz
   url: https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/repository/archive.tar.gz?ref=OpenMesh-{{ version }}
-  sha256: 60a0f6bc3a6c7f6a4bb2089538c8e65f11767cacdd0d961116b1fd577cc26462
-  patches:
-    # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/merge_requests/81
-    # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/commit/c8ebba7492358059aad10d0eb3ec64feec470055
-    - updated-output-directories.patch
+  sha256: d1bc0d75212506cb2d4d7a176483063667508a091225d2c5c607a4d45c5b3cd2
 
 build:
-  number: 4
+  number: 1004
 
   # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/issues/29
   skip: true  # [win and py>=35]
@@ -24,16 +20,15 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-  host:
-    - python
-    - boost
-  run:
-    - python
-    - boost
 
 test:
-  imports:
-    - openmesh
+  commands:
+    - test -f ${PREFIX}/lib/libOpenMeshCore.7.1.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libOpenMeshTools.7.1.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libOpenMeshCore.so.7.1  # [linux]
+    - test -f ${PREFIX}/lib/libOpenMeshTools.so.7.1  # [linux]
+    - if not exist %PREFIX%\\Library\\bin\\OpenMeshCore.7.1.dll exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\bin\\OpenMeshTools.7.1.dll exit 1  # [win]
 
 about:
   home: http://www.openmesh.org/
