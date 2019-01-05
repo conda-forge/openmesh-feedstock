@@ -23,8 +23,10 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libOpenMeshCore.7.1${SHLIB_EXT}  # [unix]
-    - test -f ${PREFIX}/lib/libOpenMeshTools.7.1${SHLIB_EXT}  # [unix]
+    - test -f ${PREFIX}/lib/libOpenMeshCore.7.1.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libOpenMeshTools.7.1.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libOpenMeshCore.so.7.1  # [linux]
+    - test -f ${PREFIX}/lib/libOpenMeshTools.so.7.1  # [linux]
     - if not exist %PREFIX%\\Library\\bin\\OpenMeshCore.7.1.dll exit 1  # [win]
     - if not exist %PREFIX%\\Library\\bin\\OpenMeshTools.7.1.dll exit 1  # [win]
 
