@@ -1,4 +1,4 @@
-{% set version = "7.1" %}
+{% set version = "8.0" %}
 
 package:
   name: openmesh
@@ -7,10 +7,10 @@ package:
 source:
   fn: OpenMesh-{{ version }}.tar.gz
   url: https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/repository/archive.tar.gz?ref=OpenMesh-{{ version }}
-  sha256: d1bc0d75212506cb2d4d7a176483063667508a091225d2c5c607a4d45c5b3cd2
+  sha256: 245a0dc7db5dddc0cb31b8dc3e39f17ee3a688989e99a39e0438b97ec0895257
 
 build:
-  number: 1004
+  number: 0
 
   # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/issues/29
   skip: true  # [win and py>=35]
