@@ -1,4 +1,4 @@
-{% set version = "7.1" %}
+{% set version = "8.0" %}
 
 package:
   name: openmesh
@@ -6,11 +6,11 @@ package:
 
 source:
   fn: OpenMesh-{{ version }}.tar.gz
-  url: https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/repository/archive.tar.gz?ref=OpenMesh-{{ version }}
-  sha256: d1bc0d75212506cb2d4d7a176483063667508a091225d2c5c607a4d45c5b3cd2
+  url: http://www.openmesh.org/media/Releases/{{ version }}/OpenMesh-{{ version }}.tar.gz
+  sha256: 8974d44026cacaa37b171945b5c96a284bfd32c9df9d671d62931050d057ec82
 
 build:
-  number: 1004
+  number: 0
 
   # https://graphics.rwth-aachen.de:9000/OpenMesh/OpenMesh/issues/29
   skip: true  # [win and py>=35]
@@ -23,12 +23,12 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libOpenMeshCore.7.1.dylib  # [osx]
-    - test -f ${PREFIX}/lib/libOpenMeshTools.7.1.dylib  # [osx]
-    - test -f ${PREFIX}/lib/libOpenMeshCore.so.7.1  # [linux]
-    - test -f ${PREFIX}/lib/libOpenMeshTools.so.7.1  # [linux]
-    - if not exist %PREFIX%\\Library\\bin\\OpenMeshCore.7.1.dll exit 1  # [win]
-    - if not exist %PREFIX%\\Library\\bin\\OpenMeshTools.7.1.dll exit 1  # [win]
+    - test -f ${PREFIX}/lib/libOpenMeshCore.{{ version }}.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libOpenMeshTools.{{ version }}.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libOpenMeshCore.so.{{ version }}  # [linux]
+    - test -f ${PREFIX}/lib/libOpenMeshTools.so.{{ version }}  # [linux]
+    - if not exist %PREFIX%\\Library\\bin\\OpenMeshCore.{{ version }}.dll exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\bin\\OpenMeshTools.{{ version }}.dll exit 1  # [win]
 
 about:
   home: http://www.openmesh.org/
