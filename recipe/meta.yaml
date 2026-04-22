@@ -1,4 +1,4 @@
-{% set version = "8.0" %}
+{% set version = "9.0" %}
 
 package:
   name: openmesh
@@ -7,7 +7,7 @@ package:
 source:
   fn: OpenMesh-{{ version }}.tar.gz
   url: http://www.openmesh.org/media/Releases/{{ version }}/OpenMesh-{{ version }}.tar.gz
-  sha256: 8974d44026cacaa37b171945b5c96a284bfd32c9df9d671d62931050d057ec82
+  sha256: baf6b1dd2a13d3fe62c4320b9300305153f08af24544fe244f8b57310e9b030c
 
 build:
   number: 0
